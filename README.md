@@ -1,5 +1,7 @@
 # SaaS Template
 
+![Dashboard screenshot](./screenshot.png)
+
 A minimalistic, framework-agnostic SaaS template in plain HTML, CSS and a small
 amount of vanilla JS. Two pages out of the box:
 
