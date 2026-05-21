@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard — SaaS Template</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="app">
+      <!-- ─────────────── SIDEBAR ─────────────── -->
+      <aside class="sidebar" aria-label="Primary">
+        <div class="sidebar__brand">
+          <span class="brand-mark" aria-hidden="true">
+            <!-- triangle logo -->
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M8 1.5 15 14H1L8 1.5Z" />
+            </svg>
+          </span>
+          <span class="brand-name">Acme</span>
+          <span class="brand-badge">beta</span>
+        </div>
+
+        <nav class="sidebar__nav" aria-label="Main">
+          <ul>
+            <li>
+              <a class="nav-row is-active" href="#" aria-current="page">
+                <!-- heroicons:micro home -->
+                <svg class="nav-row__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                  <path d="M8.543 2.232a.75.75 0 0 0-1.085 0l-5.25 5.5A.75.75 0 0 0 2.75 9H4v4a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-1a1 1 0 1 1 2 0v1a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V9h1.25a.75.75 0 0 0 .543-1.268l-5.25-5.5Z" />
+                </svg>
+                <span>Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-row" href="#">
+                <!-- heroicons:micro inbox -->
+                <svg class="nav-row__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M4.784 3A2.25 2.25 0 0 0 2.68 4.449L1.147 8.475A2.25 2.25 0 0 0 1 9.276v1.474A2.25 2.25 0 0 0 3.25 13h9.5A2.25 2.25 0 0 0 15 10.75V9.276c0-.274-.05-.545-.147-.801l-1.534-4.026A2.25 2.25 0 0 0 11.216 3H4.784Zm-.701 1.983a.75.75 0 0 1 .7-.483h6.433a.75.75 0 0 1 .701.483L13.447 9h-2.412a1 1 0 0 0-.832.445l-.406.61a1 1 0 0 1-.832.445h-1.93a1 1 0 0 1-.832-.445l-.406-.61A1 1 0 0 0 4.965 9H2.553l1.53-4.017Z" clip-rule="evenodd" />
+                </svg>
+                <span>Inbox</span>
+                <span class="nav-row__badge">3</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-row" href="#">
+                <!-- heroicons:micro chart-bar -->
+                <svg class="nav-row__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                  <path d="M12 2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-1ZM6.5 6a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V6ZM2 9a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V9Z" />
+                </svg>
+                <span>Analytics</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-row" href="#">
+                <!-- heroicons:micro folder -->
+                <svg class="nav-row__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                  <path d="M2 3.5A1.5 1.5 0 0 1 3.5 2h2.879a1.5 1.5 0 0 1 1.06.44l1.122 1.12A1.5 1.5 0 0 0 9.62 4H12.5A1.5 1.5 0 0 1 14 5.5v1.401a2.986 2.986 0 0 0-1.5-.401h-9c-.546 0-1.059.146-1.5.401V3.5ZM2 9.5v3A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5v-3A1.5 1.5 0 0 0 12.5 8h-9A1.5 1.5 0 0 0 2 9.5Z" />
+                </svg>
+                <span>Projects</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-row" href="#">
+                <!-- heroicons:micro users -->
+                <svg class="nav-row__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                  <path d="M8.5 4.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10.9 12.006c.11.542-.348.994-.9.994H2c-.553 0-1.01-.452-.902-.994a5.002 5.002 0 0 1 9.803 0ZM14.002 12h-1.59a2.556 2.556 0 0 0-.04-.29 6.476 6.476 0 0 0-1.167-2.603 3.002 3.002 0 0 1 3.633 1.911c.18.522-.283.982-.836.982ZM12 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" />
+                </svg>
+                <span>Team</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-row" href="#">
+                <!-- heroicons:micro document-text -->
+                <svg class="nav-row__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M4 2a1.5 1.5 0 0 0-1.5 1.5v9A1.5 1.5 0 0 0 4 14h8a1.5 1.5 0 0 0 1.5-1.5V6.621a1.5 1.5 0 0 0-.44-1.06L9.94 2.439A1.5 1.5 0 0 0 8.878 2H4Zm1 5.75A.75.75 0 0 1 5.75 7h4.5a.75.75 0 0 1 0 1.5h-4.5A.75.75 0 0 1 5 7.75Zm0 3a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 0 1.5h-4.5a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                </svg>
+                <span>Docs</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- ─── footer of sidebar: settings + user + logout ─── -->
+        <div class="sidebar__foot">
+          <a class="nav-row" href="#">
+            <!-- heroicons:micro adjustments-horizontal -->
+            <svg class="nav-row__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path d="M6.5 2.25a.75.75 0 0 0-1.5 0v3a.75.75 0 0 0 1.5 0V4.5h6.75a.75.75 0 0 0 0-1.5H6.5v-.75ZM11 6.5a.75.75 0 0 0-1.5 0v3a.75.75 0 0 0 1.5 0v-.75h2.25a.75.75 0 0 0 0-1.5H11V6.5ZM5.75 10a.75.75 0 0 1 .75.75v.75h6.75a.75.75 0 0 1 0 1.5H6.5v.75a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 .75-.75ZM2.75 7.25H8.5v1.5H2.75a.75.75 0 0 1 0-1.5ZM4 3H2.75a.75.75 0 0 0 0 1.5H4V3ZM2.75 11.5H4V13H2.75a.75.75 0 0 1 0-1.5Z" />
+            </svg>
+            <span>Settings</span>
+          </a>
+
+          <a class="nav-row" href="#" id="signOut">
+            <!-- heroicons:micro arrow-long-left -->
+            <svg class="nav-row__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M14 8a.75.75 0 0 1-.75.75H4.56l1.22 1.22a.75.75 0 1 1-1.06 1.06l-2.5-2.5a.75.75 0 0 1 0-1.06l2.5-2.5a.75.75 0 0 1 1.06 1.06L4.56 7.25h8.69A.75.75 0 0 1 14 8Z" clip-rule="evenodd" />
+            </svg>
+            <span>Log out</span>
+          </a>
+
+          <div class="user-card">
+            <span class="avatar" aria-hidden="true">JD</span>
+            <span class="user-card__meta">
+              <span class="user-card__name">Jane Doe</span>
+              <span class="user-card__email">jane@acme.com</span>
+            </span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ─────────────── MAIN ─────────────── -->
+      <main class="main" id="main">
+        <!-- top bar -->
+        <header class="topbar">
+          <div class="topbar__title">
+            <span class="eyebrow">Workspace / Acme</span>
+            <h1>Dashboard</h1>
+          </div>
+
+          <div class="topbar__actions">
+            <label class="search">
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" />
+              </svg>
+              <input type="search" placeholder="Search…" aria-label="Search" />
+              <span class="kbd-group" aria-hidden="true">
+                <kbd>
+                  <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.33" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M12 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2 2 2 0 0 0 2-2 2 2 0 0 0-2-2H4a2 2 0 0 0-2 2 2 2 0 0 0 2 2 2 2 0 0 0 2-2V4a2 2 0 0 0-2-2 2 2 0 0 0-2 2 2 2 0 0 0 2 2h8a2 2 0 0 0 2-2 2 2 0 0 0-2-2z" />
+                  </svg>
+                </kbd>
+                <span class="kbd-sep">+</span>
+                <kbd>K</kbd>
+              </span>
+            </label>
+            <button class="btn btn--secondary" type="button">
+              <!-- heroicons:micro plus -->
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+              </svg>
+              Invite
+            </button>
+            <button class="btn btn--primary" type="button">New project</button>
+          </div>
+        </header>
+
+        <!-- content -->
+        <section class="content">
+          <!-- ─── alert banner ─── -->
+          <div class="alert" role="status">
+            <svg class="alert__icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M15 8A7 7 0 1 1 1 8a7 7 0 0 1 14 0Zm-6 3.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM7.293 4.293A1 1 0 1 1 8 6a.75.75 0 0 0-.75.75v2a.75.75 0 0 0 1.5 0v-1.36a2.5 2.5 0 1 0-2.488-2.567.75.75 0 1 0 1.498.06.999.999 0 0 1 .533-.59Z" clip-rule="evenodd" />
+            </svg>
+            <span class="alert__msg">
+              Two API keys expire next week.
+              <a class="link" href="#">Review keys →</a>
+            </span>
+            <button class="alert__close" type="button" aria-label="Dismiss">
+              <!-- heroicons:micro x-mark -->
+              <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M5.28 4.22a.75.75 0 0 0-1.06 1.06L6.94 8l-2.72 2.72a.75.75 0 1 0 1.06 1.06L8 9.06l2.72 2.72a.75.75 0 1 0 1.06-1.06L9.06 8l2.72-2.72a.75.75 0 0 0-1.06-1.06L8 6.94 5.28 4.22Z" />
+              </svg>
+            </button>
+          </div>
+
+          <!-- stat row -->
+          <div class="stat-grid">
+            <article class="stat-card">
+              <span class="stat-card__label">Active users</span>
+              <span class="stat-card__value">12,438</span>
+              <span class="stat-card__delta is-up">+4.2% this week</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-card__label">MRR</span>
+              <span class="stat-card__value">$48,210</span>
+              <span class="stat-card__delta is-up">+1.8%</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-card__label">Conversion</span>
+              <span class="stat-card__value">3.42%</span>
+              <span class="stat-card__delta is-down">−0.3%</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-card__label">Open tickets</span>
+              <span class="stat-card__value">17</span>
+              <span class="stat-card__delta">No change</span>
+            </article>
+          </div>
+
+          <!-- panel + side -->
+          <div class="panel-grid">
+            <section class="panel">
+              <header class="panel__head">
+                <h2>Recent activity</h2>
+                <a class="link" href="#">View all</a>
+              </header>
+              <ul class="activity">
+                <li>
+                  <span class="dot" aria-hidden="true"></span>
+                  <span class="activity__main">
+                    <strong>jane@acme.com</strong> deployed
+                    <code>web-app</code> to production
+                  </span>
+                  <span class="activity__time">2m ago</span>
+                </li>
+                <li>
+                  <span class="dot" aria-hidden="true"></span>
+                  <span class="activity__main">
+                    <strong>billing</strong> renewed Pro plan
+                  </span>
+                  <span class="activity__time">1h ago</span>
+                </li>
+                <li>
+                  <span class="dot" aria-hidden="true"></span>
+                  <span class="activity__main">
+                    <strong>API</strong> rotated key
+                    <code>sk_live_•••42</code>
+                  </span>
+                  <span class="activity__time">Yesterday</span>
+                </li>
+                <li>
+                  <span class="dot" aria-hidden="true"></span>
+                  <span class="activity__main">
+                    Invite sent to <strong>sam@acme.com</strong>
+                  </span>
+                  <span class="activity__time">2d ago</span>
+                </li>
+              </ul>
+            </section>
+
+            <aside class="panel panel--soft">
+              <header class="panel__head">
+                <h2>Get started</h2>
+              </header>
+              <ol class="checklist">
+                <li class="is-done">Create your workspace</li>
+                <li class="is-done">Invite a teammate</li>
+                <li>Connect a data source</li>
+                <li>Deploy your first project</li>
+              </ol>
+              <a class="link" href="#">Read the docs →</a>
+            </aside>
+          </div>
+
+          <!-- ─── chart + usage ─── -->
+          <div class="panel-grid panel-grid--2-1">
+            <section class="panel">
+              <header class="panel__head">
+                <h2>Revenue</h2>
+                <div class="segmented" role="tablist" aria-label="Range">
+                  <button class="segmented__btn is-active" type="button">7d</button>
+                  <button class="segmented__btn" type="button">30d</button>
+                  <button class="segmented__btn" type="button">90d</button>
+                </div>
+              </header>
+              <svg class="chart" viewBox="0 0 600 180" preserveAspectRatio="none" aria-hidden="true">
+                <defs>
+                  <linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1">
+                    <stop offset="0" stop-color="#171717" stop-opacity="0.08" />
+                    <stop offset="1" stop-color="#171717" stop-opacity="0" />
+                  </linearGradient>
+                </defs>
+                <g stroke="#ebebeb" stroke-width="1">
+                  <line x1="0" y1="30" x2="600" y2="30" />
+                  <line x1="0" y1="75" x2="600" y2="75" />
+                  <line x1="0" y1="120" x2="600" y2="120" />
+                  <line x1="0" y1="165" x2="600" y2="165" />
+                </g>
+                <path d="M0,140 L75,120 L150,135 L225,90 L300,100 L375,70 L450,80 L525,50 L600,40 L600,180 L0,180 Z" fill="url(#chartFill)" />
+                <polyline points="0,140 75,120 150,135 225,90 300,100 375,70 450,80 525,50 600,40" fill="none" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <ul class="legend">
+                <li><span class="legend__swatch" style="background:#171717"></span>This period</li>
+                <li><span class="legend__swatch" style="background:#a1a1a1"></span>Previous</li>
+              </ul>
+            </section>
+
+            <aside class="panel">
+              <header class="panel__head">
+                <h2>Usage</h2>
+                <a class="link" href="#">Manage</a>
+              </header>
+              <ul class="usage">
+                <li>
+                  <div class="usage__meta">
+                    <span>Storage</span>
+                    <span class="usage__val">42 / 100 GB</span>
+                  </div>
+                  <div class="progress"><div class="progress__fill" style="width:42%"></div></div>
+                </li>
+                <li>
+                  <div class="usage__meta">
+                    <span>API calls</span>
+                    <span class="usage__val">76 / 100k</span>
+                  </div>
+                  <div class="progress"><div class="progress__fill" style="width:76%"></div></div>
+                </li>
+                <li>
+                  <div class="usage__meta">
+                    <span>Seats</span>
+                    <span class="usage__val">9 / 10</span>
+                  </div>
+                  <div class="progress"><div class="progress__fill is-warn" style="width:90%"></div></div>
+                </li>
+              </ul>
+            </aside>
+          </div>
+
+          <!-- ─── tabs + data table + pagination ─── -->
+          <section class="panel">
+            <header class="panel__head">
+              <h2>Customers</h2>
+              <div class="row-actions">
+                <button class="btn btn--secondary" type="button">
+                  <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                    <path d="M8 1.75a.75.75 0 0 1 .75.75v6.69l1.97-1.97a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 8.28a.75.75 0 0 1 1.06-1.06l1.97 1.97V2.5A.75.75 0 0 1 8 1.75Z" />
+                    <path d="M3 13.25a.75.75 0 0 1 .75-.75h8.5a.75.75 0 0 1 0 1.5h-8.5a.75.75 0 0 1-.75-.75Z" />
+                  </svg>
+                  Export
+                </button>
+              </div>
+            </header>
+
+            <div class="tabs" role="tablist">
+              <button class="tab is-active" type="button">All <span class="tab__count">128</span></button>
+              <button class="tab" type="button">Active <span class="tab__count">112</span></button>
+              <button class="tab" type="button">Trial <span class="tab__count">11</span></button>
+              <button class="tab" type="button">Churned <span class="tab__count">5</span></button>
+            </div>
+
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th><label class="checkbox"><input type="checkbox" /><span></span></label></th>
+                    <th>Customer</th>
+                    <th>Status</th>
+                    <th>Plan</th>
+                    <th class="ta-right">MRR</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><label class="checkbox"><input type="checkbox" /><span></span></label></td>
+                    <td>
+                      <div class="user-cell">
+                        <span class="avatar avatar--sm">SC</span>
+                        <span class="user-cell__meta">
+                          <strong>Sam Carter</strong>
+                          <span>sam@acme.com</span>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--success">Active</span></td>
+                    <td>Pro</td>
+                    <td class="ta-right ta-mono">$249</td>
+                    <td><button class="icon-btn" aria-label="Open menu"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 8a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm3.5 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM11.5 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg></button></td>
+                  </tr>
+                  <tr>
+                    <td><label class="checkbox"><input type="checkbox" /><span></span></label></td>
+                    <td>
+                      <div class="user-cell">
+                        <span class="avatar avatar--sm">RL</span>
+                        <span class="user-cell__meta">
+                          <strong>Rita Lee</strong>
+                          <span>rita@dovetail.io</span>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--warning">Trial</span></td>
+                    <td>Pro</td>
+                    <td class="ta-right ta-mono">$0</td>
+                    <td><button class="icon-btn" aria-label="Open menu"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 8a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm3.5 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM11.5 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg></button></td>
+                  </tr>
+                  <tr>
+                    <td><label class="checkbox"><input type="checkbox" /><span></span></label></td>
+                    <td>
+                      <div class="user-cell">
+                        <span class="avatar avatar--sm">MK</span>
+                        <span class="user-cell__meta">
+                          <strong>Mateo Kim</strong>
+                          <span>mateo@northwind.co</span>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--success">Active</span></td>
+                    <td>Enterprise</td>
+                    <td class="ta-right ta-mono">$1,200</td>
+                    <td><button class="icon-btn" aria-label="Open menu"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 8a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm3.5 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM11.5 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg></button></td>
+                  </tr>
+                  <tr>
+                    <td><label class="checkbox"><input type="checkbox" /><span></span></label></td>
+                    <td>
+                      <div class="user-cell">
+                        <span class="avatar avatar--sm">AB</span>
+                        <span class="user-cell__meta">
+                          <strong>Ari Bishop</strong>
+                          <span>ari@plumdesign.studio</span>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--error">Past due</span></td>
+                    <td>Pro</td>
+                    <td class="ta-right ta-mono">$249</td>
+                    <td><button class="icon-btn" aria-label="Open menu"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 8a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm3.5 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM11.5 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg></button></td>
+                  </tr>
+                  <tr>
+                    <td><label class="checkbox"><input type="checkbox" /><span></span></label></td>
+                    <td>
+                      <div class="user-cell">
+                        <span class="avatar avatar--sm">EN</span>
+                        <span class="user-cell__meta">
+                          <strong>Elena Novak</strong>
+                          <span>elena@helix.dev</span>
+                        </span>
+                      </div>
+                    </td>
+                    <td><span class="badge">Invited</span></td>
+                    <td>Free</td>
+                    <td class="ta-right ta-mono">$0</td>
+                    <td><button class="icon-btn" aria-label="Open menu"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 8a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm3.5 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0ZM11.5 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3Z"/></svg></button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <footer class="pagination">
+              <span class="pagination__meta">Showing <strong>1–5</strong> of <strong>128</strong></span>
+              <div class="pagination__controls">
+                <button class="btn btn--secondary" type="button" disabled>Previous</button>
+                <button class="btn btn--secondary" type="button">Next</button>
+              </div>
+            </footer>
+          </section>
+
+          <!-- ─── settings form + upgrade ─── -->
+          <div class="panel-grid panel-grid--2-1">
+            <section class="panel">
+              <header class="panel__head">
+                <h2>Account settings</h2>
+              </header>
+              <form class="form" onsubmit="event.preventDefault();">
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label for="f-name">Full name</label>
+                    <input id="f-name" class="input" type="text" value="Jane Doe" />
+                  </div>
+                  <div class="form-field">
+                    <label for="f-email">Work email</label>
+                    <input id="f-email" class="input" type="email" value="jane@acme.com" />
+                  </div>
+                  <div class="form-field">
+                    <label for="f-role">Role</label>
+                    <select id="f-role" class="select">
+                      <option>Owner</option>
+                      <option selected>Admin</option>
+                      <option>Member</option>
+                      <option>Billing only</option>
+                    </select>
+                  </div>
+                  <div class="form-field">
+                    <label for="f-tz">Time zone</label>
+                    <select id="f-tz" class="select">
+                      <option>UTC</option>
+                      <option selected>Europe / Warsaw</option>
+                      <option>America / New York</option>
+                      <option>Asia / Tokyo</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label for="f-bio">Bio</label>
+                  <textarea id="f-bio" class="textarea" rows="3" placeholder="A short description that appears next to your name."></textarea>
+                </div>
+                <label class="toggle">
+                  <input type="checkbox" checked />
+                  <span class="toggle__track"></span>
+                  <span class="toggle__label">Email me a weekly summary</span>
+                </label>
+                <label class="toggle">
+                  <input type="checkbox" />
+                  <span class="toggle__track"></span>
+                  <span class="toggle__label">Enable two-factor authentication</span>
+                </label>
+                <div class="form-actions">
+                  <button class="btn btn--secondary" type="button">Cancel</button>
+                  <button class="btn btn--primary" type="submit">Save changes</button>
+                </div>
+              </form>
+            </section>
+
+            <aside class="panel panel--dark">
+              <span class="eyebrow eyebrow--on-dark">Upgrade</span>
+              <h2 class="on-dark">Go Pro</h2>
+              <p class="on-dark-body">
+                Unlimited projects, priority support, custom domains and
+                advanced analytics.
+              </p>
+              <ul class="feature-list">
+                <li>Unlimited seats &amp; projects</li>
+                <li>Priority email support</li>
+                <li>Custom domains</li>
+                <li>Audit log &amp; SSO</li>
+              </ul>
+              <button class="btn btn--on-dark" type="button">Upgrade — $24/mo</button>
+            </aside>
+          </div>
+
+          <!-- ─── empty state ─── -->
+          <section class="panel panel--soft empty-state">
+            <span class="empty-state__icon" aria-hidden="true">
+              <!-- heroicons:micro folder-open -->
+              <svg viewBox="0 0 16 16" fill="currentColor">
+                <path d="M2 6.5V4.75A1.75 1.75 0 0 1 3.75 3h2.879c.464 0 .909.184 1.237.513l1.12 1.121a.25.25 0 0 0 .177.074H12.5A1.5 1.5 0 0 1 14 6.207V6.5a.5.5 0 0 1-.146.354l-.354.354A.5.5 0 0 1 13.146 7H2.854a.5.5 0 0 1-.354-.146L2.146 6.5A.5.5 0 0 1 2 6.5Z" />
+                <path d="m1.61 8.387.86 3.7A1.75 1.75 0 0 0 4.174 13.5h7.652a1.75 1.75 0 0 0 1.704-1.413l.86-3.7A.75.75 0 0 0 13.66 7.5H2.339a.75.75 0 0 0-.73.887Z" />
+              </svg>
+            </span>
+            <h2>No projects yet</h2>
+            <p>Create your first project to start tracking deployments and usage.</p>
+            <div class="empty-state__actions">
+              <button class="btn btn--primary" type="button">Create project</button>
+              <a class="link" href="#">Browse templates →</a>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
