@@ -559,7 +559,7 @@ h3 {
 }
 
 .stat-card__delta.is-up {
-  color: var(--success);
+  color: #16a34a;
 }
 
 .stat-card__delta.is-down {
