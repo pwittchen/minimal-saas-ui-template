@@ -10,8 +10,9 @@ amount of vanilla JS. Two pages out of the box:
 ## Design references
 
 - [`DESIGN.md`](./DESIGN.md) — the design language used here (color tokens,
-  typography scale, spacing, components, elevation, do's & don'ts). The CSS
-  variables in `styles.css` mirror the tokens defined in this file.
+  typography scale, spacing, components, elevation, do's & don'ts), defining a
+  Vercel-inspired light theme style. The CSS variables in `styles.css` mirror
+  the tokens defined in this file.
 - [getdesign.md](https://getdesign.md) — the design-language format the
   `DESIGN.md` file follows.
 - [Preline UI](https://preline.co/docs/about.html) — used as inspiration for
