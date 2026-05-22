@@ -1553,6 +1553,20 @@ h3 {
   .form-grid {
     grid-template-columns: 1fr;
   }
+  .topbar {
+    flex-wrap: wrap;
+  }
+  .topbar__actions {
+    width: 100%;
+  }
+  .search {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+  }
+  .kbd-group {
+    display: none;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1571,7 +1585,8 @@ h3 {
   .sidebar__brand {
     border: 0;
     padding: 0;
-    margin-right: auto;
+    margin: 0 auto 0 0;
+    height: auto;
   }
   .sidebar__nav,
   .sidebar__foot {
@@ -1581,9 +1596,20 @@ h3 {
     padding: var(--sm) var(--md);
     flex-wrap: wrap;
   }
-  .search {
+  .topbar__actions {
     width: 100%;
-    order: 3;
+    flex-wrap: wrap;
+  }
+  .search {
+    order: -1;
+    flex: 1 1 100%;
+    width: 100%;
+  }
+  .kbd-group {
+    display: none;
+  }
+  .topbar__actions .btn {
+    flex: 1 1 0;
   }
   .content {
     padding: var(--md);
