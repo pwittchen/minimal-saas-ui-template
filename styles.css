@@ -1618,6 +1618,19 @@ h3 {
   .kbd-group {
     display: none;
   }
+  .data-table th:nth-child(4),
+  .data-table td:nth-child(4),
+  .data-table th:nth-child(5),
+  .data-table td:nth-child(5) {
+    display: none;
+  }
+}
+
+@media (max-width: 845px) {
+  .data-table th:nth-child(6),
+  .data-table td:nth-child(6) {
+    display: none;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1667,5 +1680,15 @@ h3 {
   }
   .stat-grid {
     grid-template-columns: 1fr;
+  }
+  .data-table th:nth-child(1),
+  .data-table td:nth-child(1),
+  .data-table th:nth-child(4),
+  .data-table td:nth-child(4),
+  .data-table th:nth-child(5),
+  .data-table td:nth-child(5),
+  .data-table th:nth-child(6),
+  .data-table td:nth-child(6) {
+    display: none;
   }
 }
