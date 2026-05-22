@@ -1442,6 +1442,20 @@ h3 {
   gap: var(--xs);
 }
 
+.table-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+  padding-right: var(--sm);
+  width: 1%;
+  white-space: nowrap;
+}
+
 /* ───────────────────────────────────────────────
    Auth (sign-in / sign-up)
    ─────────────────────────────────────────────── */
