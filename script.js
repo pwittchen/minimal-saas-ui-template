@@ -18,6 +18,50 @@
     });
   });
 
+  // ─── mobile drawer ──────────────────────────────────────────
+  const menuToggle = document.querySelector(".menu-toggle");
+  const sidebar = document.getElementById("sidebar");
+  const backdrop = document.querySelector(".backdrop");
+  const mobileMQ = window.matchMedia("(max-width: 720px)");
+
+  function openDrawer() {
+    sidebar.classList.add("is-open");
+    backdrop.hidden = false;
+    requestAnimationFrame(() => backdrop.classList.add("is-visible"));
+    menuToggle.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeDrawer() {
+    sidebar.classList.remove("is-open");
+    backdrop.classList.remove("is-visible");
+    menuToggle.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+    setTimeout(() => {
+      if (!backdrop.classList.contains("is-visible")) backdrop.hidden = true;
+    }, 220);
+  }
+
+  if (menuToggle && sidebar && backdrop) {
+    menuToggle.addEventListener("click", () => {
+      sidebar.classList.contains("is-open") ? closeDrawer() : openDrawer();
+    });
+    backdrop.addEventListener("click", closeDrawer);
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && sidebar.classList.contains("is-open")) {
+        closeDrawer();
+      }
+    });
+    navRows.forEach((row) => {
+      row.addEventListener("click", () => {
+        if (mobileMQ.matches) closeDrawer();
+      });
+    });
+    mobileMQ.addEventListener("change", (e) => {
+      if (!e.matches) closeDrawer();
+    });
+  }
+
   // ─── ⌘K / Ctrl-K focuses search ─────────────────────────────
   const searchInput = document.querySelector(".search input");
   if (searchInput) {

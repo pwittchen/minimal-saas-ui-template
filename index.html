@@ -11,7 +11,7 @@
 
     <div class="app">
       <!-- ─────────────── SIDEBAR ─────────────── -->
-      <aside class="sidebar" aria-label="Primary">
+      <aside class="sidebar" id="sidebar" aria-label="Primary">
         <div class="sidebar__brand">
           <span class="brand-mark" aria-hidden="true">
             <!-- triangle logo -->
@@ -115,6 +115,12 @@
       <main class="main" id="main">
         <!-- top bar -->
         <header class="topbar">
+          <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+            <!-- heroicons:micro bars-3 -->
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M2 3.75A.75.75 0 0 1 2.75 3h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 3.75ZM2 8a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 8Zm0 4.25a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+            </svg>
+          </button>
           <div class="topbar__title">
             <span class="eyebrow">Workspace / Acme</span>
             <h1>Dashboard</h1>
@@ -544,6 +550,8 @@
         </section>
       </main>
     </div>
+
+    <div class="backdrop" hidden></div>
 
     <script src="script.js"></script>
   </body>
