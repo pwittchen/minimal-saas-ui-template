@@ -2557,6 +2557,213 @@ h3 {
   }
 }
 
+/* ───────────────────────────────────────────────
+   Chart — colors driven by tokens so dark mode flows
+   ─────────────────────────────────────────────── */
+.chart line { stroke: var(--hairline); }
+.chart polyline { stroke: var(--ink); }
+.chart stop { stop-color: var(--ink); }
+
+/* ───────────────────────────────────────────────
+   Theme toggle
+   ─────────────────────────────────────────────── */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--hairline);
+  background: var(--canvas);
+  border-radius: var(--r-sm);
+  color: var(--ink);
+  cursor: pointer;
+  padding: 0;
+  flex: 0 0 auto;
+  transition: border-color 120ms ease, background 120ms ease, color 120ms ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--hairline-strong);
+}
+
+.theme-toggle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.theme-toggle__icon--moon { display: none; }
+[data-theme="dark"] .theme-toggle__icon--sun { display: none; }
+[data-theme="dark"] .theme-toggle__icon--moon { display: inline-block; }
+
+.theme-toggle--float {
+  position: fixed;
+  top: var(--lg);
+  right: var(--lg);
+  z-index: 20;
+  box-shadow: var(--shadow-2);
+}
+
+.theme-toggle--nav {
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 960px) {
+  .theme-toggle--nav { margin-left: auto; }
+  .lp-nav__menu { margin-left: 0; }
+}
+
+/* ───────────────────────────────────────────────
+   Dark theme
+   ─────────────────────────────────────────────── */
+:root { color-scheme: light; }
+
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --primary: #ededed;
+  --on-primary: #0a0a0a;
+  --ink: #ededed;
+  --body: #a3a3a3;
+  --mute: #737373;
+  --hairline: #262626;
+  --hairline-strong: #525252;
+  --canvas: #0a0a0a;
+  --canvas-soft: #000000;
+  --canvas-soft-2: #1a1a1a;
+  --link: #3291ff;
+  --link-deep: #6ab2ff;
+  --success: #3291ff;
+  --error: #ff5555;
+  --warning: #f5a623;
+
+  --shadow-1: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  --shadow-2: 0 1px 1px rgba(0, 0, 0, 0.4),
+    0 2px 2px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+  --shadow-3: 0 2px 2px rgba(0, 0, 0, 0.5),
+    0 8px 8px -8px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.09);
+}
+
+/* primary button hover — invert to a slightly darker light */
+[data-theme="dark"] .btn--primary:hover,
+[data-theme="dark"] .lp-nav__pill--signup:hover {
+  background: #d4d4d4;
+}
+
+/* selection */
+[data-theme="dark"] ::selection {
+  background: var(--ink);
+  color: #0a0a0a;
+}
+
+/* surfaces that are intentionally dark — keep them dark in dark mode too,
+   as a slightly elevated accent against the near-black page background */
+[data-theme="dark"] .panel--dark,
+[data-theme="dark"] .pricing-card--featured,
+[data-theme="dark"] .lp-cta-band {
+  background: #1a1a1a;
+  color: #ededed;
+}
+
+[data-theme="dark"] .pricing-card--featured {
+  border-color: #2e2e2e;
+}
+
+[data-theme="dark"] .panel--dark .on-dark,
+[data-theme="dark"] .panel--dark h2,
+[data-theme="dark"] .pricing-card--featured .pricing-card__name,
+[data-theme="dark"] .pricing-card--featured .pricing-card__amount,
+[data-theme="dark"] .lp-cta-band .lp-h2 {
+  color: #ededed;
+}
+
+/* buttons placed on dark surfaces — light fill, dark text */
+[data-theme="dark"] .btn--on-dark,
+[data-theme="dark"] .pricing-card--featured .btn--secondary,
+[data-theme="dark"] .lp-cta-band .btn--secondary {
+  background: #ededed;
+  color: #1a1a1a;
+  border-color: transparent;
+}
+
+[data-theme="dark"] .btn--on-dark:hover,
+[data-theme="dark"] .pricing-card--featured .btn--secondary:hover,
+[data-theme="dark"] .lp-cta-band .btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.88);
+}
+
+/* ghost button on the dark CTA band — keep its text light */
+[data-theme="dark"] .lp-cta-band .btn--ghost-on-dark {
+  color: #ededed;
+}
+
+/* terminal mockup — stays dark */
+[data-theme="dark"] .lp-code {
+  background: #0a0a0a;
+  color: #ededed;
+}
+
+/* observability band keeps its #2a2a2a but its text uses --on-primary; fix */
+[data-theme="dark"] .lp-section--dark,
+[data-theme="dark"] .lp-section--dark .lp-h2,
+[data-theme="dark"] .lp-section--dark .feature-card__title,
+[data-theme="dark"] .lp-section--dark .feature-card__icon {
+  color: #ededed;
+}
+
+[data-theme="dark"] .lp-section--dark .feature-card {
+  background: #1a1a1a;
+}
+
+/* translucent marketing nav — flip to dark */
+[data-theme="dark"] .lp-nav {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* hero mesh — invert from black radial to white radial */
+[data-theme="dark"] .mesh {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% -8%, rgba(255, 255, 255, 0.10) 0%, transparent 70%),
+    radial-gradient(ellipse 100% 60% at 50% 0%, rgba(255, 255, 255, 0.05) 0%, transparent 75%),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 0%, transparent 60%);
+}
+
+/* badges with hardcoded soft colors */
+[data-theme="dark"] .badge--success {
+  background: rgba(50, 145, 255, 0.15);
+  color: #6ab2ff;
+  border-color: rgba(50, 145, 255, 0.3);
+}
+
+[data-theme="dark"] .badge--warning {
+  background: rgba(245, 166, 35, 0.15);
+  color: #f5b342;
+  border-color: rgba(245, 166, 35, 0.3);
+}
+
+[data-theme="dark"] .badge--error {
+  background: rgba(255, 85, 85, 0.15);
+  color: #ff8585;
+  border-color: rgba(255, 85, 85, 0.3);
+}
+
+/* embedded SVG icons — checkmark fills baked into the URL need flipping */
+[data-theme="dark"] .checkbox input:checked + span {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230a0a0a'><path fill-rule='evenodd' d='M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd'/></svg>");
+}
+
+[data-theme="dark"] .checklist li.is-done::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ededed'><path fill-rule='evenodd' d='M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14Zm3.844-8.791a.75.75 0 0 0-1.188-.918l-3.7 4.79-1.649-1.833a.75.75 0 1 0-1.114 1.004l2.25 2.5a.75.75 0 0 0 1.15-.043l4.25-5.5Z' clip-rule='evenodd'/></svg>");
+}
+
+[data-theme="dark"] .lp-split__copy li::before,
+[data-theme="dark"] .pricing-card:not(.pricing-card--featured) .pricing-card__features li::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ededed'><path fill-rule='evenodd' d='M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z' clip-rule='evenodd'/></svg>");
+}
+
 @media (max-width: 720px) {
   .app {
     grid-template-columns: 1fr;

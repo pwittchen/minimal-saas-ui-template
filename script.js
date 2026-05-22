@@ -113,4 +113,33 @@
       if (alert) alert.remove();
     });
   });
+
+  // ─── theme toggle ───────────────────────────────────────────
+  // Initial theme is applied by an inline <head> script in each
+  // page to avoid a flash of the wrong theme before paint.
+  const root = document.documentElement;
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+  function currentTheme() {
+    return root.getAttribute("data-theme")
+      || (prefersDark.matches ? "dark" : "light");
+  }
+
+  function setTheme(theme) {
+    root.setAttribute("data-theme", theme);
+    try { localStorage.setItem("theme", theme); } catch (_) {}
+  }
+
+  document.querySelectorAll(".theme-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      setTheme(currentTheme() === "dark" ? "light" : "dark");
+    });
+  });
+
+  // Follow the OS preference until the user makes an explicit choice.
+  prefersDark.addEventListener("change", (e) => {
+    let saved = null;
+    try { saved = localStorage.getItem("theme"); } catch (_) {}
+    if (!saved) setTheme(e.matches ? "dark" : "light");
+  });
 })();

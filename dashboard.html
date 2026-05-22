@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dashboard — SaaS Template</title>
     <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var theme = saved || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (_) {}
+      })();
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -142,6 +151,16 @@
                 <kbd>K</kbd>
               </span>
             </label>
+            <button class="theme-toggle" type="button" aria-label="Toggle theme">
+              <!-- heroicons:micro sun -->
+              <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M8 1a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 1ZM10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM12.95 4.11a.75.75 0 1 0-1.06-1.06l-1.062 1.06a.75.75 0 0 0 1.061 1.062l1.06-1.061ZM15 8a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 15 8ZM11.89 12.95a.75.75 0 0 0 1.06-1.06l-1.06-1.062a.75.75 0 0 0-1.062 1.061l1.061 1.06ZM8 12a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-1.5 0v-1.5A.75.75 0 0 1 8 12ZM5.172 11.89a.75.75 0 0 0-1.061-1.062L3.05 11.89a.75.75 0 1 0 1.06 1.06l1.06-1.06ZM4 8a.75.75 0 0 1-.75.75h-1.5a.75.75 0 0 1 0-1.5h1.5A.75.75 0 0 1 4 8ZM4.11 5.172A.75.75 0 0 0 5.173 4.11L4.11 3.05a.75.75 0 1 0-1.06 1.06l1.06 1.06Z" />
+              </svg>
+              <!-- heroicons:micro moon -->
+              <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                <path d="M14.438 10.148c.19-.425-.321-.787-.748-.601A5.5 5.5 0 0 1 6.453 2.31c.186-.427-.176-.938-.6-.748a6.501 6.501 0 1 0 8.585 8.586Z" />
+              </svg>
+            </button>
             <button class="btn btn--secondary" type="button">
               <!-- heroicons:micro plus -->
               <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
@@ -294,8 +313,8 @@
                 <polyline points="0,140 75,120 150,135 225,90 300,100 375,70 450,80 525,50 600,40" fill="none" stroke="#171717" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
               <ul class="legend">
-                <li><span class="legend__swatch" style="background:#171717"></span>This period</li>
-                <li><span class="legend__swatch" style="background:#a1a1a1"></span>Previous</li>
+                <li><span class="legend__swatch" style="background:var(--ink)"></span>This period</li>
+                <li><span class="legend__swatch" style="background:var(--hairline-strong)"></span>Previous</li>
               </ul>
             </section>
 
