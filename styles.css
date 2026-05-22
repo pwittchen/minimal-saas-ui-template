@@ -556,6 +556,15 @@ h3 {
 .stat-card__delta {
   font-size: 12px;
   color: var(--body);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stat-card__delta-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
 }
 
 .stat-card__delta.is-up {
