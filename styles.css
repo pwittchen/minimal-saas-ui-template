@@ -2623,15 +2623,15 @@ h3 {
   color-scheme: dark;
 
   --primary: #ededed;
-  --on-primary: #0a0a0a;
-  --ink: #ededed;
-  --body: #a3a3a3;
-  --mute: #737373;
-  --hairline: #262626;
-  --hairline-strong: #525252;
-  --canvas: #0a0a0a;
-  --canvas-soft: #000000;
-  --canvas-soft-2: #1a1a1a;
+  --on-primary: #1b1c22;
+  --ink: #ececee;
+  --body: #a8abb2;
+  --mute: #7c7f87;
+  --hairline: #34363f;
+  --hairline-strong: #4b4e58;
+  --canvas: #25272e;
+  --canvas-soft: #1b1c22;
+  --canvas-soft-2: #2f313a;
   --link: #3291ff;
   --link-deep: #6ab2ff;
   --success: #3291ff;
@@ -2664,12 +2664,27 @@ h3 {
 [data-theme="dark"] .panel--dark,
 [data-theme="dark"] .pricing-card--featured,
 [data-theme="dark"] .lp-cta-band {
-  background: #1a1a1a;
+  background: #33353e;
   color: #ededed;
 }
 
 [data-theme="dark"] .pricing-card--featured {
-  border-color: #2e2e2e;
+  border-color: #474a55;
+}
+
+/* landing cards on the plain page sit too close to the background — lift
+   their fill and border so they read as distinct surfaces (the featured
+   pricing card and dark section cards keep their own, more specific rules) */
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .pricing-card:not(.pricing-card--featured) {
+  background: #292b33;
+  border-color: #3a3d47;
+}
+
+/* "most popular" pill — was dark text on a dark pill; flip it to light */
+[data-theme="dark"] .pricing-card--featured .pricing-card__tag {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ededed;
 }
 
 [data-theme="dark"] .panel--dark .on-dark,
@@ -2715,7 +2730,7 @@ h3 {
 }
 
 [data-theme="dark"] .lp-section--dark .feature-card {
-  background: #1a1a1a;
+  background: #2f313a;
 }
 
 /* translucent marketing nav — flip to dark */
